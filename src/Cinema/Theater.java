@@ -11,9 +11,13 @@ public class Theater {
         this.daftarFilm = new ArrayList<>();
     }
 
+    public String getNamaTheater(){
+       return this.namaTheater;
+    }
+
      public void tambahFilm(Movie film){
          daftarFilm.add(film);
-         System.out.println("Film " +film.getJudul()+ " Berhasil ditambahkan ke bioskop");
+//         System.out.println("Film " +film.getJudul()+ " Berhasil ditambahkan ke bioskop");
      }
 
      public ArrayList<Movie> getDaftarFilm(){
@@ -24,7 +28,6 @@ public class Theater {
         if (daftarFilm.isEmpty()){
             System.out.println("Tidak ada film yang tersedia saat ini ");
         }else{
-            System.out.println("Daftar film di "+namaTheater + " :");
             for(Movie film : daftarFilm){
                 film.display();
             }

@@ -1,11 +1,13 @@
 package Cinema;
 
+import java.util.ArrayList;
+
 public class Movie {
     private String judul;
-    private String genre;
+    private ArrayList<String> genre;
     private double hargaTiket;
 
-   public Movie(String judul, String genre, double hargaTiket){
+   public Movie(String judul, ArrayList<String> genre, double hargaTiket){
         this.judul = judul;
         this.genre = genre;
         this.hargaTiket = hargaTiket;
@@ -21,8 +23,9 @@ public class Movie {
 
     public void display(){
         System.out.println("Judul\t: " + this.judul);
-        System.out.println("Genre\t: " + this.genre);
-        System.out.println("Harga Tiket\t : " + this.hargaTiket);
+        System.out.println("Genre\t: " + String.join(", ",genre));
+        System.out.println("Harga: Rp " + String.format("%,.0f", hargaTiket));
+        System.out.println();
     }
 
     public String toString(){
